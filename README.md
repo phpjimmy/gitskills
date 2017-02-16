@@ -86,23 +86,23 @@ git reset命令既可以回退版本，也可以把暂存区的修改回退到�
 
 第1步：创建SSH Key。在用户主目录下（C:\Users\Administrator\.ssh），看看有没有.ssh目录，
 
-        如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。
+如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。
 
-        如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
-        ```
-        $ ssh-keygen -t rsa -C "youremail@example.com"
-        ```
-        把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可
+如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
+```
+$ ssh-keygen -t rsa -C "youremail@example.com"
+```
+把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可
 
-        一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，
+一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，
 
-        这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
 
 第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
 
-       点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
 
-       点“Add Key”，你就应该看到已经添加的Key了。
+点“Add Key”，你就应该看到已经添加的Key了。
 
 GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公司提交，一会儿在家里提交，只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。
 
@@ -110,9 +110,9 @@ GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公�
 
 如果你不想让别人看到Git库，有两个办法：
 
-              一个是交点保护费，让GitHub把公开的仓库变成私有的，这样别人就看不见了（不可读更不可写）。
+一个是交点保护费，让GitHub把公开的仓库变成私有的，这样别人就看不见了（不可读更不可写）。
 
-             另一个办法是自己动手，搭一个Git服务器，因为是你自己的Git服务器，所以别人也是看不见的。这个方法我们后面会讲到的，相当简单，公司内部开发必备。
+另一个办法是自己动手，搭一个Git服务器，因为是你自己的Git服务器，所以别人也是看不见的。这个方法我们后面会讲到的，相当简单，公司内部开发必备。
 
 
 #添加远程库
@@ -169,7 +169,7 @@ Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
 #从远程库克隆(要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆)
 第一步：登陆GitHub，创建一个新的仓库，名字叫gitskills：
 
-       勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件。创建完毕后，可以看到README.md文件：
+勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件。创建完毕后，可以看到README.md文件：
 
 第二步：用命令git clone克隆一个本地库：
       ```
@@ -178,7 +178,8 @@ Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
        $ ls
        README.md
       ```
-#Git支持多种协议，包括https(https://github.com/phpjimmy/gitskills.git)，但通过ssh支持的原生git协议速度最快。
+
+Git支持多种协议，包括https(https://github.com/phpjimmy/gitskills.git)，但通过ssh支持的原生git协议速度最快。
 
 
 ## 参考教程
