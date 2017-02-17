@@ -21,10 +21,37 @@ git config命令的--global参数，用了这个参数，表示你这台机器�
 
 
 #linux下安装git
+ root用户安装
 ```
-$ yum install git
-$ git 
+$ yum install git  #提示输入y
 ```
+输入git 查看git常用命令
+```
+$ git
+```
+安装完成后，还需要最后一步设置，在命令行输入：
+```
+$ git config --global user.name "phpjimmy"
+$ git config --global user.email "13783591763@163.com"
+```
+
+创建SSH Key：
+```
+$ ssh-keygen -t rsa -C "13783591763@163.com"
+```
+
+/root/.ssh/id_rsa  id_rsa.pub  known_hosts
+```
+$ cd root
+$ ls -ah
+$ cd .ssh
+$ ls
+$ vi id_rsa_pub
+$ cp 
+```
+
+登录GitHub,点击右上角"Settings"，点击SSH and GPG keys,点击New SSH key,
+填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，点“Add Key”。
 
 
 #创建版本库（版本库又名仓库，英文名repository）
